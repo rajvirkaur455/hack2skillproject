@@ -1,0 +1,50 @@
+.features {
+  background: var(--bg-light);
+  padding: 4rem 2rem;
+}
+
+.app.dark-mode .features {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.app.dark-mode .section-header h2 {
+  color: var(--text-dark);
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

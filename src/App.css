@@ -1,0 +1,142 @@
+:root {
+  --primary: #0B5ED7;
+  --secondary: #0A9396;
+  --white: #FFFFFF;
+  --bg-light: #F5F9FC;
+  --accent-blue: #38BDF8;
+  --accent-green: #10B981;
+  --accent-red: #EF4444;
+  --accent-yellow: #F59E0B;
+  --text-dark: #1F2937;
+  --text-light: #6B7280;
+  --border-color: #E5E7EB;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.app.dark-mode {
+  --primary: #0B5ED7;
+  --secondary: #0A9396;
+  --white: #1F2937;
+  --bg-light: #111827;
+  --accent-blue: #38BDF8;
+  --text-dark: #F9FAFB;
+  --text-light: #D1D5DB;
+  --border-color: #374151;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 70px;
+}
+
+.back-button {
+  margin: 1.25rem 1.5rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: none;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  background: var(--secondary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* Global Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 60px;
+  }
+}

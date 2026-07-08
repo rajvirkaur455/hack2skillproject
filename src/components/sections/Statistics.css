@@ -1,0 +1,56 @@
+.statistics {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.app.dark-mode .statistics {
+  background: var(--bg-light);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(11, 94, 215, 0.3);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}

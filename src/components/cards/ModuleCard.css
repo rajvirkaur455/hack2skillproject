@@ -1,0 +1,60 @@
+.module-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.app.dark-mode .module-card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.module-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.module-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.app.dark-mode .module-card h3 {
+  color: var(--text-dark);
+}
+
+.module-card p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.module-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.module-link:hover {
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .module-card {
+    padding: 1.5rem;
+  }
+
+  .module-icon {
+    font-size: 2rem;
+  }
+}

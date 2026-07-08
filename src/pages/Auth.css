@@ -1,0 +1,226 @@
+.auth-container {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bg-light) 0%, #E0F2FE 100%);
+}
+
+.app.dark-mode .auth-container {
+  background: linear-gradient(135deg, var(--bg-light) 0%, #1e3a5f 100%);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.auth-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.app.dark-mode .auth-header h1 {
+  color: var(--text-dark);
+}
+
+.auth-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.login-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.login-option-card {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.app.dark-mode .login-option-card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.login-option-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.login-option-card:hover {
+  box-shadow: 0 15px 40px rgba(11, 94, 215, 0.2);
+  transform: translateY(-5px);
+}
+
+.login-option-card:hover::before {
+  transform: scaleX(1);
+}
+
+.option-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-option-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.app.dark-mode .login-option-card h3 {
+  color: var(--text-dark);
+}
+
+.login-option-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.option-arrow {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-option-card:hover .option-arrow {
+  transform: translateX(5px);
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app.dark-mode .auth-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.app.dark-mode .auth-form h2 {
+  color: var(--text-dark);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.app.dark-mode .form-group label {
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.app.dark-mode .form-group input,
+.app.dark-mode .form-group select {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1);
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.form-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(11, 94, 215, 0.3);
+}
+
+.auth-footer-text {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.auth-footer-text a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 2rem 1rem;
+  }
+
+  .auth-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .login-options-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .auth-form {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+}

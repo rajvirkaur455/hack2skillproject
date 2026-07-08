@@ -1,0 +1,86 @@
+.testimonials {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.app.dark-mode .testimonials {
+  background: var(--bg-light);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(11, 94, 215, 0.1) 0%, rgba(10, 147, 150, 0.1) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.app.dark-mode .testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 15px 40px rgba(11, 94, 215, 0.15);
+  border-color: var(--primary);
+}
+
+.testimonial-quote {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.app.dark-mode .testimonial-quote {
+  color: var(--text-dark);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  font-size: 2.5rem;
+}
+
+.author-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.app.dark-mode .author-name {
+  color: var(--text-dark);
+}
+
+.author-role {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1rem;
+  }
+}

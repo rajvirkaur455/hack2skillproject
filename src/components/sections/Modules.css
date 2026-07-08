@@ -1,0 +1,23 @@
+.modules {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.app.dark-mode .modules {
+  background: var(--bg-light);
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
