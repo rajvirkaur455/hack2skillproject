@@ -23,9 +23,7 @@ export default function DistrictLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     localStorage.setItem("userRole", "district");
-
     router.push("/dashboard/authority");
   };
 

@@ -1,14 +1,16 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import '../Auth.css';
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import "../Auth.css";
 
 export default function HospitalLogin() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [formData, setFormData] = useState({
-    hospitalId: '',
-    email: '',
-    password: '',
+    hospitalId: "",
+    email: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -20,8 +22,8 @@ export default function HospitalLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('userRole', 'hospital');
-    navigate('/dashboard/hospital');
+    localStorage.setItem("userRole", "hospital");
+    router.push("/dashboard/hospital");
   };
 
   return (
@@ -44,6 +46,7 @@ export default function HospitalLogin() {
               required
             />
           </div>
+
           <div className="form-group">
             <label>Email</label>
             <input
@@ -55,6 +58,7 @@ export default function HospitalLogin() {
               required
             />
           </div>
+
           <div className="form-group">
             <label>Password</label>
             <input
@@ -66,6 +70,7 @@ export default function HospitalLogin() {
               required
             />
           </div>
+
           <button type="submit" className="form-submit-btn">
             Login
           </button>

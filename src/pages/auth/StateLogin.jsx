@@ -27,5 +27,56 @@ export default function StateLogin() {
     router.push("/dashboard/authority");
   };
 
-  // ...rest of your JSX
+  return (
+    <div className="auth-container">
+      <motion.div
+        className="auth-form"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <h2>State Authority Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>State Code</label>
+            <input
+              type="text"
+              name="stateCode"
+              value={formData.stateCode}
+              onChange={handleChange}
+              placeholder="STATE-01"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="official@state.gov"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <button type="submit" className="form-submit-btn">
+            Login
+          </button>
+        </form>
+      </motion.div>
+    </div>
+  );
 }

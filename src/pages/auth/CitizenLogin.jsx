@@ -1,13 +1,15 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import '../Auth.css';
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import "../Auth.css";
 
 export default function CitizenLogin() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -19,9 +21,8 @@ export default function CitizenLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Mock login
-    localStorage.setItem('userRole', 'citizen');
-    navigate('/complaint');
+    localStorage.setItem("userRole", "citizen");
+    router.push("/complaint");
   };
 
   return (
@@ -44,6 +45,7 @@ export default function CitizenLogin() {
               required
             />
           </div>
+
           <div className="form-group">
             <label>Password</label>
             <input
@@ -55,6 +57,7 @@ export default function CitizenLogin() {
               required
             />
           </div>
+
           <button type="submit" className="form-submit-btn">
             Login
           </button>
