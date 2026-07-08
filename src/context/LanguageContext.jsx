@@ -1,6 +1,10 @@
 import { createContext, useContext, useState } from 'react';
 
-const LanguageContext = createContext();
+const LanguageContext = createContext({
+  language: 'en',
+  setLanguage: () => {},
+  t: {},
+});
 
 const translations = {
   en: {
