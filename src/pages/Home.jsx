@@ -7,9 +7,7 @@ import Modules from '../components/sections/Modules';
 import AICapabilities from '../components/sections/AICapabilities';
 import ComplaintProcess from '../components/sections/ComplaintProcess';
 import MultilingualSupport from '../components/sections/MultilingualSupport';
-import Statistics from '../components/sections/Statistics';
 import DashboardPreview from '../components/sections/DashboardPreview';
-import Testimonials from '../components/sections/Testimonials';
 import './Pages.css';
 
 export default function Home() {
@@ -23,9 +21,8 @@ export default function Home() {
       <AICapabilities />
       <ComplaintProcess />
       <MultilingualSupport />
-      <Statistics />
       <DashboardPreview />
-      <Testimonials />
+   
 
       {/* CTA Section */}
       <section className="cta-section">
